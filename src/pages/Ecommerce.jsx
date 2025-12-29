@@ -1,6 +1,6 @@
 import React from 'react';
 import { BsCurrencyDollar } from 'react-icons/bs';
-import { GoPrimitiveDot } from 'react-icons/go';
+import { MdFiberManualRecord } from 'react-icons/md';
 import { IoIosMore } from 'react-icons/io';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
@@ -10,7 +10,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 import product9 from '../data/product9.jpg';
 
 const DropDown = ({ currentMode }) => (
-  <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
+  <div className="px-2 py-1 rounded-md w-28 border-1 border-color">
     <DropDownListComponent id="time" fields={{ text: 'Time', value: 'Id' }} style={{ border: 'none', color: (currentMode === 'Dark') && 'white' }} value="1" dataSource={dropdownData} popupHeight="220px" popupWidth="120px" />
   </div>
 );
@@ -20,9 +20,9 @@ const Ecommerce = () => {
 
   return (
     <div className="mt-24">
-      <div className="flex flex-wrap lg:flex-nowrap justify-center ">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
-          <div className="flex justify-between items-center">
+      <div className="flex flex-wrap justify-center lg:flex-nowrap">
+        <div className="w-full p-8 m-3 bg-white bg-center bg-no-repeat bg-cover dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl lg:w-80 pt-9 bg-hero-pattern">
+          <div className="flex items-center justify-between">
             <div>
               <p className="font-bold text-gray-400">Earnings</p>
               <p className="text-2xl">$63,448.78</p>
@@ -44,9 +44,9 @@ const Ecommerce = () => {
             />
           </div>
         </div>
-        <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
+        <div className="flex flex-wrap items-center justify-center gap-1 m-3">
           {earningData.map((item) => (
-            <div key={item.title} className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56  p-4 pt-9 rounded-2xl ">
+            <div key={item.title} className="p-4 bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 pt-9 rounded-2xl">
               <button
                 type="button"
                 style={{ color: item.iconColor, backgroundColor: item.iconBg }}
@@ -60,33 +60,33 @@ const Ecommerce = () => {
                   {item.percentage}
                 </span>
               </p>
-              <p className="text-sm text-gray-400  mt-1">{item.title}</p>
+              <p className="mt-1 text-sm text-gray-400">{item.title}</p>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="flex gap-10 flex-wrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780  ">
+      <div className="flex flex-wrap justify-center gap-10">
+        <div className="p-4 m-3 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-780">
           <div className="flex justify-between">
-            <p className="font-semibold text-xl">Revenue Updates</p>
+            <p className="text-xl font-semibold">Revenue Updates</p>
             <div className="flex items-center gap-4">
               <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
                 <span>
-                  <GoPrimitiveDot />
+                  <MdFiberManualRecord />
                 </span>
                 <span>Expense</span>
               </p>
               <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
                 <span>
-                  <GoPrimitiveDot />
+                  <MdFiberManualRecord />
                 </span>
                 <span>Budget</span>
               </p>
             </div>
           </div>
-          <div className="mt-10 flex gap-10 flex-wrap justify-center">
-            <div className=" border-r-1 border-color m-4 pr-10">
+          <div className="flex flex-wrap justify-center gap-10 mt-10">
+            <div className="pr-10 m-4 border-r-1 border-color">
               <div>
                 <p>
                   <span className="text-3xl font-semibold">$93,438</span>
@@ -94,12 +94,12 @@ const Ecommerce = () => {
                     23%
                   </span>
                 </p>
-                <p className="text-gray-500 mt-1">Budget</p>
+                <p className="mt-1 text-gray-500">Budget</p>
               </div>
               <div className="mt-8">
                 <p className="text-3xl font-semibold">$48,487</p>
 
-                <p className="text-gray-500 mt-1">Expense</p>
+                <p className="mt-1 text-gray-500">Expense</p>
               </div>
 
               <div className="mt-5">
@@ -121,14 +121,14 @@ const Ecommerce = () => {
         </div>
         <div>
           <div
-            className=" rounded-2xl md:w-400 p-4 m-3"
+            className="p-4 m-3 rounded-2xl md:w-400"
             style={{ backgroundColor: currentColor }}
           >
-            <div className="flex justify-between items-center ">
-              <p className="font-semibold text-white text-2xl">Earnings</p>
+            <div className="flex items-center justify-between">
+              <p className="text-2xl font-semibold text-white">Earnings</p>
 
               <div>
-                <p className="text-2xl text-white font-semibold mt-8">$63,448.78</p>
+                <p className="mt-8 text-2xl font-semibold text-white">$63,448.78</p>
                 <p className="text-gray-200">Monthly revenue</p>
               </div>
             </div>
@@ -138,9 +138,9 @@ const Ecommerce = () => {
             </div>
           </div>
 
-          <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10">
+          <div className="flex items-center justify-center gap-10 p-8 m-3 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400">
             <div>
-              <p className="text-2xl font-semibold ">$43,246</p>
+              <p className="text-2xl font-semibold">$43,246</p>
               <p className="text-gray-400">Yearly sales</p>
             </div>
 
@@ -151,9 +151,9 @@ const Ecommerce = () => {
         </div>
       </div>
 
-      <div className="flex gap-10 m-4 flex-wrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl">
-          <div className="flex justify-between items-center gap-2">
+      <div className="flex flex-wrap justify-center gap-10 m-4">
+        <div className="p-6 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl">
+          <div className="flex items-center justify-between gap-2">
             <p className="text-xl font-semibold">Recent Transactions</p>
             <DropDown currentMode={currentMode} />
           </div>
@@ -167,12 +167,12 @@ const Ecommerce = () => {
                       color: item.iconColor,
                       backgroundColor: item.iconBg,
                     }}
-                    className="text-2xl rounded-lg p-4 hover:drop-shadow-xl"
+                    className="p-4 text-2xl rounded-lg hover:drop-shadow-xl"
                   >
                     {item.icon}
                   </button>
                   <div>
-                    <p className="text-md font-semibold">{item.title}</p>
+                    <p className="font-semibold text-md">{item.title}</p>
                     <p className="text-sm text-gray-400">{item.desc}</p>
                   </div>
                 </div>
@@ -180,7 +180,7 @@ const Ecommerce = () => {
               </div>
             ))}
           </div>
-          <div className="flex justify-between items-center mt-5 border-t-1 border-color">
+          <div className="flex items-center justify-between mt-5 border-t-1 border-color">
             <div className="mt-3">
               <Button
                 color="white"
@@ -190,22 +190,22 @@ const Ecommerce = () => {
               />
             </div>
 
-            <p className="text-gray-400 text-sm">36 Recent Transactions</p>
+            <p className="text-sm text-gray-400">36 Recent Transactions</p>
           </div>
         </div>
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl w-96 md:w-760">
-          <div className="flex justify-between items-center gap-2 mb-10">
+        <div className="p-6 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl w-96 md:w-760">
+          <div className="flex items-center justify-between gap-2 mb-10">
             <p className="text-xl font-semibold">Sales Overview</p>
             <DropDown currentMode={currentMode} />
           </div>
-          <div className="md:w-full overflow-auto">
+          <div className="overflow-auto md:w-full">
             <LineChart />
           </div>
         </div>
       </div>
 
       <div className="flex flex-wrap justify-center">
-        <div className="md:w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+        <div className="p-6 m-3 bg-white md:w-400 dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl">
           <div className="flex justify-between">
             <p className="text-xl font-semibold">Weekly Stats</p>
             <button type="button" className="text-xl font-semibold text-gray-500">
@@ -213,19 +213,19 @@ const Ecommerce = () => {
             </button>
           </div>
 
-          <div className="mt-10 ">
+          <div className="mt-10">
             {weeklyStats.map((item) => (
-              <div key={item.title} className="flex justify-between mt-4 w-full">
+              <div key={item.title} className="flex justify-between w-full mt-4">
                 <div className="flex gap-4">
                   <button
                     type="button"
                     style={{ background: item.iconBg }}
-                    className="text-2xl hover:drop-shadow-xl text-white rounded-full p-3"
+                    className="p-3 text-2xl text-white rounded-full hover:drop-shadow-xl"
                   >
                     {item.icon}
                   </button>
                   <div>
-                    <p className="text-md font-semibold">{item.title}</p>
+                    <p className="font-semibold text-md">{item.title}</p>
                     <p className="text-sm text-gray-400">{item.desc}</p>
                   </div>
                 </div>
@@ -239,7 +239,7 @@ const Ecommerce = () => {
           </div>
 
         </div>
-        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+        <div className="p-6 m-3 bg-white w-400 dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl">
           <div className="flex justify-between">
             <p className="text-xl font-semibold">MedicalPro Branding</p>
             <button type="button" className="text-xl font-semibold text-gray-400">
@@ -250,16 +250,16 @@ const Ecommerce = () => {
             16 APR, 2021
           </p>
 
-          <div className="flex gap-4 border-b-1 border-color mt-6">
+          <div className="flex gap-4 mt-6 border-b-1 border-color">
             {medicalproBranding.data.map((item) => (
-              <div key={item.title} className="border-r-1 border-color pr-4 pb-2">
+              <div key={item.title} className="pb-2 pr-4 border-r-1 border-color">
                 <p className="text-xs text-gray-400">{item.title}</p>
                 <p className="text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
-          <div className="border-b-1 border-color pb-4 mt-2">
-            <p className="text-md font-semibold mb-2">Teams</p>
+          <div className="pb-4 mt-2 border-b-1 border-color">
+            <p className="mb-2 font-semibold text-md">Teams</p>
 
             <div className="flex gap-4">
               {medicalproBranding.teams.map((item) => (
@@ -274,14 +274,14 @@ const Ecommerce = () => {
             </div>
           </div>
           <div className="mt-2">
-            <p className="text-md font-semibold mb-2">Leaders</p>
+            <p className="mb-2 font-semibold text-md">Leaders</p>
             <div className="flex gap-4">
               {medicalproBranding.leaders.map((item, index) => (
-                <img key={index} className="rounded-full w-8 h-8" src={item.image} alt="" />
+                <img key={index} className="w-8 h-8 rounded-full" src={item.image} alt="" />
               ))}
             </div>
           </div>
-          <div className="flex justify-between items-center mt-5 border-t-1 border-color">
+          <div className="flex items-center justify-between mt-5 border-t-1 border-color">
             <div className="mt-3">
               <Button
                 color="white"
@@ -291,10 +291,10 @@ const Ecommerce = () => {
               />
             </div>
 
-            <p className="text-gray-400 text-sm">36 Recent Transactions</p>
+            <p className="text-sm text-gray-400">36 Recent Transactions</p>
           </div>
         </div>
-        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+        <div className="p-6 m-3 bg-white w-400 dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl">
           <div className="flex justify-between">
             <p className="text-xl font-semibold">Daily Activities</p>
             <button type="button" className="text-xl font-semibold text-gray-500">
@@ -303,13 +303,13 @@ const Ecommerce = () => {
           </div>
           <div className="mt-10">
             <img
-              className="md:w-96 h-50 "
+              className="md:w-96 h-50"
               src={product9}
               alt=""
             />
             <div className="mt-8">
-              <p className="font-semibold text-lg">React 18 coming soon!</p>
-              <p className="text-gray-400 ">By Johnathan Doe</p>
+              <p className="text-lg font-semibold">React 18 coming soon!</p>
+              <p className="text-gray-400">By Johnathan Doe</p>
               <p className="mt-8 text-sm text-gray-400">
                 This will be the small description for the news you have shown
                 here. There could be some great info.
